@@ -1,0 +1,6 @@
+- Criamos as rotas
+- Criamos os styledComponents (mas não vamos usar...será usado CSS GLOBAL)
+- Criar banco de dados simulado (dados.json) fora de tudo
+  - instalar dependencia json-server
+  - configurando: dentro do package.json em SCRIPTS (adicionar "backend": "json-server --watch dados.json --port 5000",)
+  - executando: dados.json -> criar banco -> npm run backend (ou qualquer nome escolhido) -> permite acessar sua API privada (servidor rodando)
