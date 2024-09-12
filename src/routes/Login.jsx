@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-
+import { LoginStyle } from "../css/LoginStyle";
+import logo from "../assets/logo.jpg"
 const Login=()=>{
     //Hook - useRef pega a referencia do componente ou elemento e guarda
     const usuario = useRef();
@@ -60,49 +61,51 @@ const Login=()=>{
 
     return(
         <>
-        <section className="container">
-            <div className="container-login">
-                <div className="login">
-                    <form className="login-form" onSubmit={handleSubmit}>
-                        <span className="titulo-login">Faça seu login</span>
+        <LoginStyle>
+            <section className="container">
+                <div className="container-login">
+                    <div className="login">
+                        <form className="login-form" onSubmit={handleSubmit}>
+                            <span className="titulo-login">Faça seu login</span>
 
-                        <div className="w-input">
-                            <input
-                                type="text"
-                                className="input-form"
-                                id="usuario"
-                                ref={usuario} //permite renderizar as infos 1 vez apenas.
-                            />
+                            <div className="w-input">
+                                <input
+                                    type="text"
+                                    className="input-form"
+                                    id="usuario"
+                                    ref={usuario} //permite renderizar as infos 1 vez apenas.
+                                />
 
-                        </div>
-                        <div className="w-input">
-                            <input
-                                type="password"
-                                className="input-form"
-                                id="senha"
-                                ref={senha} //permite renderizar as infos 1 vez apenas.
-                            />
+                            </div>
+                            <div className="w-input">
+                                <input
+                                    type="password"
+                                    className="input-form"
+                                    id="senha"
+                                    ref={senha} //permite renderizar as infos 1 vez apenas.
+                                />
 
-                        </div>
-                        <div className="login-btn">
-                            <button type="submit" className="login-form-btn">Login</button>   
-                        </div>
-                        
-                        <ul className="utilidades">
-                            <li>
-                                <a href="#" className="text1">Esqueceu sua senha?</a>
-                                
-                            </li>
-                            <li>
-                                <span className="text1">Não possui conta?</span>
-                                <a href="#"> Criar</a>
-                            </li>
-                        </ul>
-                    </form>
+                            </div>
+                            <div className="login-btn">
+                                <button type="submit" className="login-form-btn">Login</button>   
+                            </div>
+                            
+                            <ul className="utilidades">
+                                <li>
+                                    <a href="#" className="text1">Esqueceu sua senha?</a>
+                                    
+                                </li>
+                                <li>
+                                    <span className="text1">Não possui conta?</span>
+                                    <a href="#"> Criar</a>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <img src={logo} alt="LOGO DO SITE"></img>
                 </div>
-                <img src="" alt="LOGO DO SITE"></img>
-            </div>
-        </section>
+            </section>
+        </LoginStyle>
         </>
     )
 }
