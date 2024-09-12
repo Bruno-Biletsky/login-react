@@ -35,8 +35,8 @@ const Login=()=>{
             let token =
                 Math.random().toString(16).substring(2)+
                 Math.random().toString(16).substring(2)
-                sessionStorage.getItem("usuario",usuario)
-                sessionStorage.getItem("senha",token)
+                sessionStorage.setItem("usuario",usuario)
+                sessionStorage.setItem("senha",token)
                 navigate("/dashboard")
 
         }else{
@@ -57,7 +57,8 @@ const Login=()=>{
         .then((resposta)=>{
             setUsuarios(resposta)
         })
-    })
+        //retorna um array vazio
+    },[])
 
     return(
         <>
