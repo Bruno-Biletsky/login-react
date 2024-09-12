@@ -4,5 +4,6 @@
   - instalar dependencia json-server
   - configurando: dentro do package.json em SCRIPTS (adicionar "backend": "json-server --watch dados.json --port 5000",)
   - executando: dados.json -> criar banco -> abrir outro terminal (fora do run dev) ->  npm run backend (ou qualquer nome escolhido) -> permite acessar sua API privada (servidor rodando)
+  - session storage para verificar login (criptografado)
   - Vamos usar CSS GLOBAL (funciona os 2 juntos?)
   - F12 -> application -> local storage e Session storage
