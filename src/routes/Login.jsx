@@ -1,24 +1,63 @@
 import { useRef, useState, useEffect } from "react"
-import { useNavigate}
+import { useNavigate } from "react-router-dom"
 
 const Login=()=>{
     //Hook - useRef pega a referencia do componente ou elemento e guarda
     const usuario = useRef();
     const senha = useRef();
     
-    //Hook - useSate - Manpula  estado da variavel
+    //Hook - useSate - Manipula  estado da variavel
     const [usuarios, setUsuarios]= useState([]);
 
     //Hook - useNavigate - ele redireciona para um componente
     const navigate = useNavigate();
 
     // criando a função de validação
+    function validade(){
+        for(let i=0; i<usuarios.length; i++){
+            if(
+                usuarios[i].usuario == usuario.current.value &&
+                usuarios[i].senha == senha.current.value
+            ){
+                return true;
+            }
+        }
+    }
 
 
     //criando a função handleSubmit
+    const handleSubmit=(event)=>{
+        //previne que sua pagina faça qualquer modificação ex.load
+        event.preventDefault();
 
+        if (validade()){
+            let token =
+                Math.random().toString(16).substring(2)+
+                Math.random().toString(16).substring(2)
+                sessionStorage.getItem("usuario",usuario)
+                sessionStorage.getItem("senha",token)
+                navigate("/dashboard")
 
-    //Hook - useEffect - realiza  efeito colateral na pagina vai executar  login
+        }else{
+            alert("usuario/senha inválidos")
+        }
+    }
+
+    //Hook - useEffect - permite acessar o json e executar login
+
+    useEffect(()=>{
+        //acessa a api e vai trazer os dados via url
+        fetch("http://localhost:5000/usuarios/")
+        //promise
+        .then((resposta)=>{
+            return resposta.json();
+        })
+        //receber as alterações (useState)
+        .then((resposta)=>{
+            setUsuarios(resposta)
+        })
+    })
+
     return(
         <>
         <section className="container">
@@ -38,10 +77,10 @@ const Login=()=>{
                         </div>
                         <div className="w-input">
                             <input
-                                type="text"
+                                type="password"
                                 className="input-form"
-                                id="usuario"
-                                ref={usuario} //permite renderizar as infos 1 vez apenas.
+                                id="senha"
+                                ref={senha} //permite renderizar as infos 1 vez apenas.
                             />
 
                         </div>

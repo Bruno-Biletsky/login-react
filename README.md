@@ -3,4 +3,6 @@
 - Criar banco de dados simulado (dados.json) fora de tudo
   - instalar dependencia json-server
   - configurando: dentro do package.json em SCRIPTS (adicionar "backend": "json-server --watch dados.json --port 5000",)
-  - executando: dados.json -> criar banco -> npm run backend (ou qualquer nome escolhido) -> permite acessar sua API privada (servidor rodando)
+  - executando: dados.json -> criar banco -> abrir outro terminal (fora do run dev) ->  npm run backend (ou qualquer nome escolhido) -> permite acessar sua API privada (servidor rodando)
+  - Vamos usar CSS GLOBAL (funciona os 2 juntos?)
+  - F12 -> application -> local storage e Session storage
