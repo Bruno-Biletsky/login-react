@@ -50,6 +50,7 @@ export const LoginStyle = styled.section`
     width: 100%;
     padding: 0 5px;
     border: none;
+    outline: 0;
 }
 .login-btn{
     width: 100%;
