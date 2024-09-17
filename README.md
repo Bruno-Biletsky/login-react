@@ -7,3 +7,6 @@
   - session storage para verificar login (criptografado)
   - Vamos usar CSS GLOBAL (funciona os 2 juntos?)
   - F12 -> application -> local storage e Session storage
+  - Fazer cadastro de novos dados no JSON 
+  - Usar icone do proprio reac (reac-icons) --> import {iconName} from "react-icons/xyz" (ver no site oficial https://react-icons.github.io/react-icons/)
+- Nesse caso import { MdCancel } from "react-icons/md"; chamando como <MdCancel />

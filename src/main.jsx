@@ -6,6 +6,7 @@ import Home from './routes/Home.jsx'
 import Login from './routes/Login.jsx'
 import Dashboard from './routes/Dashboard.jsx'
 import Error from './routes/Error.jsx'
+import Usuario from './routes/Usuario.jsx'
 
 const router = createBrowserRouter([{
   path:'/',element:<App/>,
@@ -15,6 +16,7 @@ const router = createBrowserRouter([{
     {path:'/', element:<Home/>},
     {path:'/login',element:<Login/>},
     {path:'/dashboard',element:<Dashboard/>},
+    {path:'/usuario', element:<Usuario/>}
 
   ]
 }])

@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { LoginStyle } from "../css/LoginStyle";
 import logo from "../assets/logo.jpg"
 const Login=()=>{
@@ -97,8 +97,8 @@ const Login=()=>{
                                     
                                 </li>
                                 <li>
-                                    <span className="text1">Não possui conta?</span>
-                                    <a href="#"> Criar</a>
+                                    <span className="text1">Não possui conta? </span>
+                                    <Link to="/usuario">Criar</Link>
                                 </li>
                             </ul>
                         </form>
