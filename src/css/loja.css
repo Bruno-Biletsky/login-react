@@ -45,12 +45,13 @@ main{
 
 }
 .produto-item img{
-    max-width: 45%;
+    max-width: 46%;
     margin-bottom: 1rem;
     transition: .5s;
     border-radius: 40px;   
 }
 .produto-item{
+    padding: 0.55rem;
     background-image: var(--gradient);
     color: var(--color4);
     text-align: center;
@@ -60,7 +61,23 @@ main{
     align-items: center;
     transition: .5s;
 }
-.produto-item:hover{
+.produto-item img:hover{
     scale: 1.1;
     cursor: zoom-in;
+}
+.produto-item p{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color1);
+}
+.produto-item div{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.span-row-2{
+    grid-row: span 2;
+}
+.span-col-2{
+    grid-column: span 2;
 }

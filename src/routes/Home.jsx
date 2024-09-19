@@ -5,6 +5,7 @@ import produto3 from "../assets/produto (3).jpg"
 
 
 const Home=()=>{
+    
     return(
         <>
         <header>
@@ -12,7 +13,7 @@ const Home=()=>{
         </header>
         <main>
             <article className="produto-grid">
-                <section className="produto-item">
+                <section className="produto-item span-row-2">
                     <img src={produto1} alt="produto1" id="image"/>
                     <div>
                         <h3>Produto-1</h3>
@@ -36,7 +37,7 @@ const Home=()=>{
                     </div>
                 </section>
 
-                 <section className="produto-item">
+                 <section className="produto-item span-row-2">
                     <img src={produto2} alt="Produto-4" id="image"/>
                     <div>
                         <h3>Produto-4</h3>
@@ -44,7 +45,7 @@ const Home=()=>{
                     </div>
                 </section>
 
-                <section className="produto-item">
+                <section className="produto-item span-row-2 span-col-2">
                     <img src={produto1} alt="Produto-5" id="image"/>
                     <div>
                         <h3>Produto-5</h3>
@@ -100,7 +101,39 @@ const Home=()=>{
                     </div>
                 </section>
 
+                 {/* ESTILO ENRICO DE SER 
+                const Home=()=>{
+                    let count = 0
+                    const Template=(props)=>{
+                        count+=1/2
+                        return(<>
+                            <section className="produto-item">
+                                <img alt={`Produto-${count}`} id="image" src={props.imagem}/>
+                                <div>
+                                    <h3>Produto-{count}</h3>
+                                    <p>R${props.preco}</p>
+                                </div>
+                            </section>
+                        </>)
+                    }
                 
+                    return(<>
+                        <header>
+                            <h1>Loja City</h1>
+                        </header>
+                        <main>
+                            <article className="produto-grid">
+                            CHAMAR ABAIXO QUANTOS QUISER
+                                <Template preco="120" imagem={Imagem1}/>
+                                <Template preco="1330" imagem={Imagem3}/>
+                                <Template preco="1440" imagem={Imagem4}/>
+                                <Template preco="1990" imagem={Imagem5}/>
+                            </article>
+                        </main>
+                    </>)
+                }
+                export default Home
+*/}
             </article>
         </main>
         </>
